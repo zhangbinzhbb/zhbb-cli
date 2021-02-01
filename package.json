@@ -1,6 +1,6 @@
 {
   "name": "zb-cli",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -20,11 +20,6 @@
     "compile": "./node_modules/.bin/babel src -d dist",
     "watch": "npm run compile -- --watch",
     "lint": "./node_modules/.bin/eslint src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   },
   "dependencies": {
     "commander": "^2.9.0",

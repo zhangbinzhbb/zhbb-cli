@@ -6,6 +6,7 @@ import { ncp } from "ncp";
  * @param {*} absolutePath 绝对路径
  */
 export const betterRequire = (absolutePath) => {
+  // eslint-disable-next-line global-require
   const module = require(absolutePath);
   if (module.default) {
     return module.default;

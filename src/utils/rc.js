@@ -1,9 +1,9 @@
 import { writeFile, readFile, exists } from "mz/fs";
-import { decode, encode } from "ini"; //格式分析和序列化
+import { decode, encode } from "ini"; // 格式分析和序列化
 import { RC, DEFAULTS } from "./constants";
 
-//RC是配置文件 DEFAULT是默认配置
-//promisify：异步函数promise化
+// RC是配置文件 DEFAULT是默认配置
+// promisify：异步函数promise化
 
 // 文件操作： fs， path， 我们用的await/async, promise封装 ==> mz
 // 使用mz 代替  promisify

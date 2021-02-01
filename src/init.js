@@ -1,3 +1,4 @@
+/* eslint-disable function-paren-newline */
 import ora from "ora";
 import { resolve } from "path";
 import { exists, readdir } from "mz/fs";
@@ -19,7 +20,8 @@ const apply = async () => {
     );
     process.exit(0);
   }
-  let loading, answers;
+  let loading;
+  let answers;
 
   loading = ora("listing the scaffolds");
   loading.start();

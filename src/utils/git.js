@@ -39,7 +39,7 @@ export const download = (src, dest) =>
     });
   });
 
-//下载到本地
+// 下载到本地
 export const downloadLocal = async (repo, version) => {
   // https://github.com/flipxfx/download-git-repo
   const conf = await getAll();
@@ -51,14 +51,14 @@ export const downloadLocal = async (repo, version) => {
   return true;
 };
 
-//链接地址：https://api.github.com/orgs/zhufeng-cli/repos 项目
+// 链接地址：https://api.github.com/orgs/zhufeng-cli/repos 项目
 export const repoList = async () => {
   const conf = await getAll();
   const api = `https://api.github.com/${conf.type}/${conf.registry}/repos`;
   return await fetch(api);
 };
 
-//链接地址：https://api.github.com/repos/zhufeng-cli/vue-template/tags 版本
+// 链接地址：https://api.github.com/repos/zhufeng-cli/vue-template/tags 版本
 export const tagList = async (repo) => {
   const conf = await getAll();
   const api = `https://api.github.com/repos/${conf.registry}/${repo}/tags`;
