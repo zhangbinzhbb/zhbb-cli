@@ -9,7 +9,7 @@ const apply = async () => {
   const has = await exists(DOWNLOAD);
   if (!has) {
     console.warn(
-      `${DOWNLOAD} is not existed. Please install a scaffold by \`zb install\``
+      `${DOWNLOAD} is not existed. Please install a scaffold by \`zb-cli install\``
     );
     process.exit(0);
   }

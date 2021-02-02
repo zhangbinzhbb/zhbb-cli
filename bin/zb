@@ -2,4 +2,4 @@
 
 /* eslint-disable eol-last */
 // 使用main作为入口文件，并且以node环境执行此文件
-require('../dist/zb');
+require('../dist/main.js');

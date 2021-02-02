@@ -9,26 +9,26 @@ const actionMap = {
     //配置命令的名字
     desc: "install remote templates from the remote store", //命令对应的描述
     alias: "i", //命令别的名称
-    examples: ["zb install", "zb i"], //命令对应的模板
+    examples: ["zb-cli install", "zb-cli i"], //命令对应的模板
   },
   config: {
     desc: `set and get local config in ${RC}`,
     alias: "i",
     examples: [
-      "zb config set <k> <v>",
-      "zb config remove <k>",
-      "zb config get <k>",
+      "zb-cli config set <k> <v>",
+      "zb-cli config remove <k>",
+      "zb-cli config get <k>",
     ],
   },
   init: {
     desc: "generate a new project from a template",
     alias: "g",
-    examples: ["zb init", "zb g"],
+    examples: ["zb-cli init", "zb-cli g"],
   },
   list: {
     desc: "list the downloaded scaffolds",
     alias: "l",
-    examples: ["zb list", "zb l"],
+    examples: ["zb-cli list", "zb-cli l"],
   },
   "*": {
     desc: "The command is not found",

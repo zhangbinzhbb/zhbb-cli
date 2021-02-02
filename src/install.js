@@ -55,7 +55,7 @@ const apply = async () => {
     answers = { version: "" };
   }
   // 下载文件(先下载到缓存区文件中)
-  // zb-cli init
+  // zb-cli-cli init
   // 下载中...
   loading = ora(`downloading ${project}`);
   loading.start();

@@ -9,9 +9,9 @@ const HOME = process.env[process.platform === "win32" ? "USERPROFILE" : "HOME"];
 // process.env.USERPROFILE  //当前目录下配置的文件
 
 export const VERSION = version;
-export const RC = `${HOME}/.zbrc`;
+export const RC = `${HOME}/.zb-clirc`;
 // 下载目录
-export const DOWNLOAD = `${HOME}/.zb`;
+export const DOWNLOAD = `${HOME}/.zb-cli`;
 export const TEMP = os.tmpdir();
 export const UA = name;
 
@@ -22,4 +22,4 @@ export const DEFAULTS = {
   type: "orgs", // ['orgs', 'users']
 };
 export const INTERFACE_ASK = "interfaces/ask.js";
-export const COMPILE_TEMP = `${TEMP}/zb_compile`;
+export const COMPILE_TEMP = `${TEMP}/zb-cli_compile`;
