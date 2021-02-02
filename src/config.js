@@ -1,30 +1,24 @@
-import { get, set, getAll, remove } from "./utils/rc";
-/**
- * 下载到本地仓库
- * 本地仓库的配置文件
- */
-const apply = async (action, k, v) => {
-  let r;
+import { get, set, remove, getAll } from "./utils/rc";
+
+let config = async (action, k, v) => {
   switch (action) {
+    case "get":
+      if (k) {
+        let key = await get(k);
+        console.log("key", key);
+      } else {
+        let obj = await getAll();
+        Object.keys(obj).forEach((key) => {
+          console.log(`${key} = ${obj[key]}`);
+        });
+      }
+      break;
     case "set":
-      await set(k, v);
+      set(k, v);
       break;
     case "remove":
-      await remove(k);
+      remove(k);
       break;
-    // 默认为读
-    default:
-      // 如果没有k就获取所有的，有就返回当k的值
-      if (!k) {
-        r = await getAll();
-        Object.keys(r).forEach((key) => {
-          console.log(`${key}=${r[key]}`);
-        });
-      } else {
-        r = await get(k);
-        console.log(r);
-      }
   }
 };
-
-export default apply;
+export default config;

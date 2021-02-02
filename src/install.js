@@ -1,66 +1,44 @@
-// 下载模板 选择模板使用
-// 用过配置文件 获取模板信息(有哪些模板)
-import ora from "ora"; // 进度条
-import inquirer from "inquirer"; // 命令交互
 import { repoList, tagList, downloadLocal } from "./utils/git";
+import ora from "ora";
+import inquirer from "inquirer";
 
-/**
- * 下载到本地仓库
- * 本地仓库的配置文件
- */
-const apply = async () => {
-  let list;
-  let loading;
-  let choices;
-  let answers;
-
-  loading = ora("fetching repo list");
+let install = async () => {
+  let loading = ora("fetching template ...");
   loading.start();
-  list = await repoList();
-
-  loading.succeed("fetched repo list");
-
-  choices = list.map(({ name }) => name);
-
-  answers = await inquirer.prompt([
+  let list = await repoList();
+  // console.log('list', list);
+  loading.succeed();
+  list = list.map(({ name }) => name);
+  let answer = await inquirer.prompt([
     {
       type: "list",
       name: "project",
-      message: "which project do you want to install?",
-      choices,
+      choices: list,
+      questions: "please choose a template",
     },
   ]);
+  let project = answer.project;
 
-  const project = answers.project;
-
-  // 获取tag列表
-  loading = ora(`fetching ${project} tag list`);
+  loading = ora("fetching tag ...");
   loading.start();
   list = await tagList(project);
-  loading.succeed(`fetched ${project} tag list`);
-  // 如果有tag就选择列表
-  if (list.length) {
-    choices = list.map(({ name }) => name);
-    answers = await inquirer.prompt([
-      {
-        type: "list",
-        name: "version",
-        message: "which version do you want to install?",
-        choices,
-      },
-    ]);
+  loading.succeed();
+  list = list.map(({ name }) => name);
+  answer = await inquirer.prompt([
+    {
+      type: "list",
+      name: "tag",
+      choices: list,
+      questions: "please choose a tag",
+    },
+  ]);
+  let tag = answer.tag;
+  console.log(project, tag);
 
-    // 如果没有tag，version就为空，表示采用默认分支下载
-  } else {
-    answers = { version: "" };
-  }
-  // 下载文件(先下载到缓存区文件中)
-  // zb-cli-cli init
-  // 下载中...
-  loading = ora(`downloading ${project}`);
+  loading = ora("download project ...");
   loading.start();
-  await downloadLocal(project, answers.version);
-  loading.succeed(`downloaded ${project}`); // 结束loading
+  await downloadLocal(project, tag);
+  loading.succeed();
 };
 
-export default apply;
+export default install;
