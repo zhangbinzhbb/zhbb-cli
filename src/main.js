@@ -5,15 +5,15 @@ let actionMap = {
   install: {
     alias: "i",
     description: "install template",
-    examples: ["bb-cli i", "bb-cli install"],
+    examples: ["zb-cli i", "zb-cli install"],
   },
   config: {
     alias: "c",
-    description: "config .bbclirc",
+    description: "config .zbclirc",
     examples: [
-      "bb-cli config set <k> <v>",
-      "bb-cli config get <k>",
-      "bb-cli config remove <k>",
+      "zb-cli config set <k> <v>",
+      "zb-cli config get <k>",
+      "zb-cli config remove <k>",
     ],
   },
   "*": {

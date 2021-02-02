@@ -6,7 +6,7 @@ const HOME = process.env[process.platform === "win32" ? "USERPROFILE" : "HOME"];
 
 export const VERSION = version;
 
-export const RC = `${HOME}/.bbclirc`;
+export const RC = `${HOME}/.zbclirc`;
 
 export const DEFAULTS = {
   registry: "zhufeng-cli",
