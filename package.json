@@ -1,6 +1,6 @@
 {
   "name": "zb-cli",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "- 实现可以在命令行中直接运行代码 - b-cli install （安装） - b-cli config （配置）",
   "main": "index.js",
   "scripts": {
