@@ -6,15 +6,18 @@
 
 #### 安装教程
 
-1. xxxx
+1. zb-cli config set
 2. xxxx
 3. xxxx
 
 #### 使用说明
 
-1. zb -v 查看版本
-2. xxxx
-3. xxxx
+1. zb-cli -v 查看版本
+
+- install | i install remote templates from the remote store (从远程存储区安装远程模板)
+- config | i set and get local config in C:\Users\13020/.zbclirc (在 C:\Users\13020/.zbclirc 中设置和获取本地配置)
+- init | g generate a new project from a template (从模板生成一个新项目)
+- list | l list the downloaded scaffolds(列出下载的脚手架)
 
 ## 将包变成全局的
 

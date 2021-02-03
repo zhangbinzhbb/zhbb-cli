@@ -12,9 +12,9 @@ export const VERSION = version;
 // zbclirc
 export const RC = `${HOME}/.zbclirc`;
 // 下载目录
-export const DOWNLOAD = `${HOME}/.template`;
+export const DOWNLOAD = `${HOME}/.zb`;
 export const TEMP = os.tmpdir();
-export const UA = name;
+export const UA = "xxx";
 
 // RC配置下载(模板)的地方
 // 给github的api来用的
@@ -22,5 +22,6 @@ export const DEFAULTS = {
   registry: "zhufeng-cli",
   type: "orgs", // ['orgs', 'users']
 };
+
 export const INTERFACE_ASK = "interfaces/ask.js";
 export const COMPILE_TEMP = `${TEMP}/zb-cli_compile`;
