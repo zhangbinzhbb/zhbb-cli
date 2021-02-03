@@ -1,7 +1,7 @@
-// 下载模板 选择模板使用
-// 用过配置文件 获取模板信息(有哪些模板)
 import ora from "ora"; // 进度条
 import inquirer from "inquirer"; // 命令交互
+// 下载模板 选择模板使用
+// 用过配置文件 获取模板信息(有哪些模板)
 import { repoList, tagList, downloadLocal } from "./utils/git";
 
 /**

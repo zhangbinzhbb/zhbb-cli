@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#! usr/bin/evn node
 
 /* eslint-disable eol-last */
 // 使用main作为入口文件，并且以node环境执行此文件

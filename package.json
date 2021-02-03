@@ -1,6 +1,6 @@
 {
   "name": "zb-cli",
-  "version": "0.1.4",
+  "version": "0.1.9",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -14,7 +14,7 @@
     "husky": "^0.15.0-rc.13"
   },
   "bin": {
-    "zb-cli": "./bin/zb"
+    "zb-cli": "./bin/www"
   },
   "scripts": {
     "compile": "./node_modules/.bin/babel src -d dist",

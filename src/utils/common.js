@@ -3,6 +3,7 @@ import { ncp } from "ncp";
 /**
  * 为什么不用相对路径
  * 深目录下使用betterRequire，路径错了
+ * 两种引入方式
  * @param {*} absolutePath 绝对路径
  */
 export const betterRequire = (absolutePath) => {

@@ -9,16 +9,17 @@ const HOME = process.env[process.platform === "win32" ? "USERPROFILE" : "HOME"];
 // process.env.USERPROFILE  //当前目录下配置的文件
 
 export const VERSION = version;
-export const RC = `${HOME}/.zb-clirc`;
+// zbclirc
+export const RC = `${HOME}/.zbclirc`;
 // 下载目录
-export const DOWNLOAD = `${HOME}/.zb-cli`;
+export const DOWNLOAD = `${HOME}/.template`;
 export const TEMP = os.tmpdir();
 export const UA = name;
 
 // RC配置下载(模板)的地方
 // 给github的api来用的
 export const DEFAULTS = {
-  registry: "chef-template",
+  registry: "zhufeng-cli",
   type: "orgs", // ['orgs', 'users']
 };
 export const INTERFACE_ASK = "interfaces/ask.js";

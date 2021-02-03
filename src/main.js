@@ -3,10 +3,9 @@
 import program from "commander"; // yargs
 import { VERSION, RC } from "./utils/constants";
 import main from "./index";
-
+//配置命令的名字
 const actionMap = {
   install: {
-    //配置命令的名字
     desc: "install remote templates from the remote store", //命令对应的描述
     alias: "i", //命令别的名称
     examples: ["zb-cli install", "zb-cli i"], //命令对应的模板

@@ -1,3 +1,5 @@
+// 专门管理.zbclirc文件(当前的用户目录下)
+// zb-cli config set key value
 import { get, set, getAll, remove } from "./utils/rc";
 /**
  * 下载到本地仓库
